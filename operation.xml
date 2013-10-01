@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="build">
+	<property name="dest" value="lib"></property>
+	<property name="dest.file" value="datumgen.jar"></property>
+	<property name="datumgen.home" value="E:/datumGen"></property>
+	<target name="createJar">
+		<jar destfile="${dest}/${dest.file}" basedir="bin"></jar>
+	</target>
+	<target name="copyto_datumgen_home">
+		<copy todir="${datumgen.home}/lib" preservelastmodified="true">
+			<fileset dir="${dest}" includes="datumgen.jar"/>
+		</copy>
+	</target>
+</project>

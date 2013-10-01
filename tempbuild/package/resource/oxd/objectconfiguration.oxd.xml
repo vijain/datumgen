@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OBJECTS>
+	<OBJECT class="com.mbi.common.data.patient.PatientData" table="PATIENT">
+		<FILE>PatientData.oxd.xml</FILE>
+		<SQLFILE>PatientData.sql</SQLFILE>
+		<DATAHELPER>${datahelper}</DATAHELPER>
+	</OBJECT>
+</OBJECTS>

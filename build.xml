@@ -1,0 +1,90 @@
+<project name="DatumGen Build">
+
+	<property file="build.properties"></property>
+	<property name="checkout.src" value="OCI/OCI_Backups/datumgen"/>
+	<property name="cvs.username" value="vcjain"/>
+	<property name="temp.dir" value="tempbuild"/>
+	<property name="checkout.dir" value="${temp.dir}/checkout"/>
+	<property name="build.dir" value="${temp.dir}/dest"/>
+	<property name="jarname" value="datumgen${version}.jar"/>
+	<property name="package.dir" value="${temp.dir}/package"/>
+	
+	<path id="classpath.id">
+		<fileset dir="${checkout.dir}/${checkout.src}/lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	
+	<!-- ================================= 
+          target: init              
+         ================================= -->
+    <target name="init" description="description">
+        
+    </target>
+
+	
+	<!-- ================================= 
+          target: checkout              
+         ================================= -->
+    <target name="checkout" depends="init" description="description">
+    	<cvs command="checkout" 
+    			cvsroot=":pserver:${cvs.username}@${cvs.server}:${cvs.root}"
+    			package="${checkout.src}" 
+    			dest="${checkout.dir}" 
+    			passfile="C:\Documents and Settings\vcjain\.cvspass"/>
+    		
+    </target>
+
+	<!-- ================================= 
+          target: compilesrc              
+         ================================= -->
+    <target name="compilesrc" description="description">
+    	<mkdir dir="${build.dir}"/>
+        <javac classpathref="classpath.id" 
+        	srcdir="${checkout.dir}/${checkout.src}/src"
+        	destdir="${build.dir}"/>
+    </target>
+
+	<!-- ================================= 
+          target: buildjar              
+         ================================= -->
+    <target name="build" depends="compilesrc">
+        <jar destfile="${temp.dir}/${jarname}" basedir="${build.dir}"></jar>
+    </target>
+
+	<!-- ================================= 
+          target: checkoutandbuild              
+         ================================= -->
+    <target name="checkoutandbuild" 
+    	depends="clean, checkout, build" description="description"/>
+
+	<!-- ================================= 
+          target: package              
+         ================================= -->
+    <target name="package" depends="clean,checkoutandbuild" description="description">
+        <mkdir dir="${package.dir}"/>
+    	<copy todir="${package.dir}/resource">
+    		<fileset dir="${checkout.dir}/${checkout.src}/resource">
+    			<include name="**/*.*"/>
+    		</fileset>
+    	</copy>
+    	
+    	<copy todir="${package.dir}/lib">
+    		<fileset dir="${checkout.dir}/${checkout.src}/lib">
+    			<include name="*.jar"/>
+    		</fileset>
+    	</copy>
+    	
+    	<copy todir="${package.dir}/lib">
+    		<fileset dir="${temp.dir}">
+    			<include name="${jarname}"/>
+    		</fileset>
+    	</copy>
+		    	
+    </target>
+	
+	<target name="clean">
+		<delete dir="${checkout.dir}"></delete>
+		<delete dir="${build.dir}"></delete>
+	</target>
+</project>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MESSAGES>
+	<MESSAGE code="1">Exception occurs while parsing ${1}</MESSAGE>
+	<MESSAGE code="2">Exception occure while executing Data Helper</MESSAGE>
+	<MESSAGE code="3">Error occured while creating Database connection.Please check the parameter and retry.</MESSAGE>
+	<MESSAGE code="4">File Writer encountered problem while writing to file ${1}. Do not able to process.</MESSAGE>
+	<MESSAGE code="5">Not able to locate specified Class. Please check the class name.</MESSAGE>
+	<MESSAGE code="6">Error occured while saving file. Please retry again</MESSAGE>
+	<MESSAGE code="7">Error occured while parsing file ${1}. Please see log for details</MESSAGE>
+	<MESSAGE code="8">Error occured while opening resource directory. Please type full path in text box.</MESSAGE>
+	<MESSAGE code="9">Error occured while fetching the SQL file form database. In order to continue please specify correct file name.</MESSAGE>
+	<MESSAGE code="10">Error occured while populating conditions. Please see log for details</MESSAGE>
+	<MESSAGE code="11">Error occured creating insert query. Please see log for details</MESSAGE>
+	<MESSAGE code="12">Error occured while populating runtime value. Please see log for details</MESSAGE>
+	<MESSAGE code="13">Error occured while preparing insert query from test data. Please see log for details</MESSAGE>
+	<MESSAGE code="14">Error occured while adding test data. Please see log for details</MESSAGE>
+	<MESSAGE code="15">Error occured while adding test condition. Please see log for details</MESSAGE>
+	<MESSAGE code="16">Error occured while adding test data in TESTDATA table. Please see log for details</MESSAGE>
+	<MESSAGE code="17">Some error occured in the opeartion.${1}. Please see log for details</MESSAGE>
+	<MESSAGE code="18">Error occured in rollback operation. Please see log for details</MESSAGE>
+	<MESSAGE code="19">Error occured while fetching test data from Application DB.</MESSAGE>
+	<MESSAGE code="20">Error occured while fetching column name for ${1} table. Please check the table name.</MESSAGE>
+	<MESSAGE code="21">Error occured while fetching column properties. Please see the log for details.</MESSAGE>
+	<MESSAGE code="22">Data Input Error, Please enter an number value.</MESSAGE>
+	<MESSAGE code="23">Data Input Error, Maximum allowable length is ${1}.</MESSAGE>
+	<MESSAGE code="24">Data Input Error, Maximum allowable length after decimal is ${1}.</MESSAGE>
+	<MESSAGE code="25">Data Input Error, Please enter a valid date in YYYY-MM-dd format.</MESSAGE>
+	<MESSAGE code="26">Error occured while displaying data from file. Please see the log for details.</MESSAGE>
+	<MESSAGE code="27">Data Input Error, Please enter a valid boolean value.</MESSAGE>
+	<MESSAGE code="28">System is not able to find file {1}.</MESSAGE>
+	<MESSAGE code="29">Error occured while updating test data. Please see log for details</MESSAGE>
+	<MESSAGE code="30">Data Input Error, Please enter an Integer value.</MESSAGE>
+	<MESSAGE code="31">Data Input Error, Please enter a valid date in YYYY-MM-dd HH24.MI.SS format.</MESSAGE>	
+	<MESSAGE code="32">Error occured while adding Sqlfile entry. Please see log for details</MESSAGE>
+	<MESSAGE code="33">Error occured while writing Sql query to ${1} file. Please see log for details</MESSAGE>
+	<MESSAGE code="34">Error occured while populating Test Data. Please see log for details</MESSAGE>
+	<MESSAGE code="35">Data Input Error, Maximum allowable length before decimal is ${1}.</MESSAGE>
+	<MESSAGE code="36">Error occured while adding SQL Query. Please see log for details</MESSAGE>
+	<MESSAGE code="37">Extension of file name is not correct. Please specify .properties as extension</MESSAGE>
+</MESSAGES>

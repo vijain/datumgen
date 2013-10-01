@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TESTCONDITIONS>
+	<TESTCONDITION id="1">
+		<testdata dataClass="com.mbi.common.data.patient.PatientData" OID="A2DC119A1B6243D8BBD37DA2E9729112"/>
+ 		<testdata dataClass="com.mbi.common.data.therapy.TherapyData" OID="78028B1C90364B709CC1924F69C3F911"/>
+	</TESTCONDITION>
+	<TESTCONDITION id="2">
+		<testdata dataClass="com.mbi.common.data.patient.PatientData" OID="A2DC119A1B6243D8BBD37DA2E9729112"/>
+ 		<testdata dataClass="com.mbi.common.data.therapy.TherapyData" OID="78028B1C90364B709CC1924F69C3F911"/>
+	</TESTCONDITION>
+</TESTCONDITIONS>

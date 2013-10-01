@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIGURATIONS>
+	<CONFIGURATION name="app">
+		<DATABASE>DEMPSYS</DATABASE>
+		<DRIVER>oracle.jdbc.driver.OracleDriver</DRIVER>
+		<DATABASEURL>jdbrc:oracle:thin</DATABASEURL>
+		<HOST>impetus-607</HOST>
+		<PORT>1521</PORT>
+		<USER>emphsys45j</USER>
+		<PASSWORD>emphsys45j</PASSWORD>
+	</CONFIGURATION>
+	<CONFIGURATION name="own">
+		<DATABASE>DEMPSYS</DATABASE>
+		<DRIVER>oracle.jdbc.driver.OracleDriver</DRIVER>
+		<DATABASEURL>jdbrc:oracle:thin</DATABASEURL>
+		<HOST>impetus-607</HOST>
+		<PORT>1521</PORT>
+		<USER>admin</USER>
+		<PASSWORD>gtest</PASSWORD>
+	</CONFIGURATION>
+</CONFIGURATIONS>

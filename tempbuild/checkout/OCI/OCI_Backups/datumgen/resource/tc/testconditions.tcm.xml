@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MAPPING>
+	<TESTCONDITIONS testclass="com.mbi.ejb.patient.PatientServiceBean" file="patient.tc.xml" dbfile="PatientServiceBean.sql">
+		<TESTCONDITION>
+			<NAME>SETPRIMARYTHERAPY</NAME>
+			<ID>1</ID>
+			<DESC>test method for setting primary therapy to patient</DESC>
+		</TESTCONDITION>
+		<TESTCONDITION>
+			<NAME>SETPATIENTACTIVE</NAME>
+			<ID>2</ID>
+			<DESC>test method patient STATUS TO ACTIVE</DESC>
+		</TESTCONDITION>
+	</TESTCONDITIONS>
+	<TESTCONDITIONS testclass="com.mbi.ejb.patient.PatientDataBuildServer" file="patient.tc.xml" dbfile="PatientServiceBean.sql">
+		<TESTCONDITION>
+			<NAME>SETPRIMARYTHERAPY</NAME>
+			<ID>3</ID>
+			<DESC>test method for setting primary therapy to patient</DESC>
+		</TESTCONDITION>
+	</TESTCONDITIONS>
+</MAPPING>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<TESTCONDITIONS>
+	<TESTCONDITION id="1">
+		<testdata dataClass="com.mbi.common.data.patient.PatientData" OID="A2DC119A1B6243D8BBD37DA2E9729112"/>
+ 		<testdata dataClass="com.mbi.common.data.therapy.TherapyData" OID="78028B1C90364B709CC1924F69C3F911"/>
+	</TESTCONDITION>
+	<TESTCONDITION id="2">
+		<testdata dataClass="com.mbi.common.data.patient.PatientData" OID="A2DC119A1B6243D8BBD37DA2E9729112"/>
+ 		<testdata dataClass="com.mbi.common.data.therapy.TherapyData" OID="78028B1C90364B709CC1924F69C3F911"/>
+	</TESTCONDITION>
+</TESTCONDITIONS>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+   <!-- ============================== -->
+   <!-- Append messages to the console -->
+   <!-- ============================== -->
+   <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+      <layout class="org.apache.log4j.PatternLayout">
+         <param name="ConversionPattern" value="&lt;%d{DATE}&gt; %-5p [%c] %m%n"/>
+      </layout>
+   </appender>
+
+   <!-- ================================= -->
+   <!-- Preserve APPLICATION messages in a local file -->
+   <!-- ================================= -->
+   <!-- A daily rolling appender -->
+   <appender name="APPFILE" class="org.apache.log4j.RollingFileAppender">
+      <param name="MaxFileSize" value="1MB" />
+      <param name="MaxBackupIndex" value="60" />
+      <param name="Append" value="true" />
+      <param name="File" value="${ijunit.log.path}/iJunit.log" />
+
+      <layout class="org.apache.log4j.PatternLayout">
+         <!-- The default pattern: Date Priority [Category][Thread] Message\n -->
+         <param name="ConversionPattern" value="&lt;%d{DATE}&gt; %-5p [%c][%t] %m%n"/>
+      </layout>
+   </appender>
+
+	<appender name="APP_LOGFILE" class="org.apache.log4j.RollingFileAppender">
+      <param name="MaxFileSize" value="1MB" />
+      <param name="MaxBackupIndex" value="60" />
+      <param name="Append" value="true" />
+      <param name="File" value="${log.path}/emphsys.log" />
+
+      <layout class="org.apache.log4j.PatternLayout">
+         <!-- The default pattern: Date Priority [Category][Thread] Message\n -->
+         <param name="ConversionPattern" value="&lt;%d{DATE}&gt; %-5p [%c][%t] %m%n"/>
+      </layout>
+   </appender>
+
+
+   <!-- ================       -->
+   <!-- Categories Definitions -->
+   <!-- ================       -->
+
+   <category name="com.ijunit" additivity="false">
+      <priority value="DEBUG"/>
+      <appender-ref ref="APPFILE"/>
+   </category>
+   
+   <category name="com.ijunit.common" additivity="false">
+      <priority value="DEBUG"/>
+      <appender-ref ref="APPFILE"/>
+   </category>
+
+	<category name="com.ijunit.parser" additivity="false">
+      <priority value="DEBUG"/>
+      <appender-ref ref="APPFILE"/>
+   </category>
+
+   <category name="org.apache" additivity="false">
+      <priority value="WARN"/>
+      <appender-ref ref="APPFILE"/>
+   </category>
+
+   <category name="com.mbi" additivity="true">
+      <priority value="DEBUG"/>
+      <appender-ref ref="APP_LOGFILE"/>
+   </category>
+
+   <!-- ======================= -->
+   <!-- Setup the Root category -->
+   <!-- Anything not caught by a catagory above will default to the root. -->
+   <!-- ======================= -->
+   <root>
+	<!-- Setting this priority to debug will not put the app in debug mode.
+		It will cause all uncaught messages through log4j. Unless the additivity
+		flag is used on a category, the root may cause double logging. -->
+	  <priority value="DEBUG"/>
+	  <appender-ref ref="APP_LOGFILE"/>
+      <appender-ref ref="APPFILE"/>
+   </root>
+</log4j:configuration>

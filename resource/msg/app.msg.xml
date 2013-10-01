@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MESSAGES>
+	<MESSAGE code="1">Connection Succeeded!!!</MESSAGE>
+	<MESSAGE code="2">File ${1} is saved successfully.</MESSAGE>
+	<MESSAGE code="3">Please specify Test class.</MESSAGE>
+	<MESSAGE code="4">Please specify Test data class.</MESSAGE>
+	<MESSAGE code="5">Please select or specify a condition name.</MESSAGE>
+	<MESSAGE code="6">Please try again after populating test data table by selecting test data xml file.</MESSAGE>
+	<MESSAGE code="7">Please select checkbox corressponding to test data fields which you want to add.</MESSAGE>
+	<MESSAGE code="8">Data configuration properies are not set properly. Please set the required property\n
+	in file ${1}</MESSAGE>
+	<MESSAGE code="9">Test Data is created successfully.</MESSAGE>			
+	<MESSAGE code="10">Please select a single record.</MESSAGE>
+	<MESSAGE code="11">Please select a record.</MESSAGE>
+	<MESSAGE code="12">Please specify a value for ${1}.</MESSAGE>
+	<MESSAGE code="13">Do you want to quit this application ?</MESSAGE>
+	<MESSAGE code="14">Please select at least one key column.</MESSAGE>
+	<MESSAGE code="15">Object is already loaded.</MESSAGE>	
+	<MESSAGE code="16">Not able to locate application Test Data.</MESSAGE>
+	<MESSAGE code="17">Please select checkbox corressponding to test data fields which you want to modify.</MESSAGE>		
+	<MESSAGE code="18">You may need to restart application to take changes in effect. Do you want to restart now?</MESSAGE>		
+	<MESSAGE code="19">Please specify Sql file.</MESSAGE>
+	<MESSAGE code="20">No Data Class found.</MESSAGE>	
+	<MESSAGE code="21">SQL Script for Test Data is saved successfully.</MESSAGE>
+	<MESSAGE code="22">SQL Script for Test Data is not saved yet. Please click on save button. </MESSAGE>		
+	<MESSAGE code="23">Test Data updated successfully.</MESSAGE>				
+</MESSAGES>
